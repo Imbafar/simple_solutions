@@ -1,0 +1,2 @@
+# Codewars_solutions
+For_educational_purposes
