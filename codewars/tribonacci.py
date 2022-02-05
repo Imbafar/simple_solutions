@@ -3,7 +3,7 @@ def tribonacci(signature, n):
     a, b, c = signature
     arr = []
     arr += signature
-    for i in range(n-3):
-        c, b, a = a+b+c, c, b
+    for i in range(n - 3):
+        c, b, a = a + b + c, c, b
         arr.append(c)
     return arr[:n]

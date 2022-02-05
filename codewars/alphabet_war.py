@@ -1,14 +1,14 @@
 # https://www.codewars.com/kata/5938f5b606c3033f4700015a/
 def alphabet_war(fight):
     SCORE = {
-        'w': 4,
-        'p': 3,
-        'b': 2,
-        's': 1,
-        'm': -4,
-        'q': -3,
-        'd': -2,
-        'z': -1,
+        "w": 4,
+        "p": 3,
+        "b": 2,
+        "s": 1,
+        "m": -4,
+        "q": -3,
+        "d": -2,
+        "z": -1,
     }
     arr = []
     next_item = True
@@ -19,7 +19,7 @@ def alphabet_war(fight):
             before_item = True
         elif v in SCORE:
             next_item = True
-        elif v == '*':
+        elif v == "*":
             if arr and next_item and before_item:
                 arr.pop()
                 before_item = False
@@ -29,8 +29,8 @@ def alphabet_war(fight):
             next_item = True
     c = sum(arr)
     if c > 0:
-        return('Left side wins!')
+        return "Left side wins!"
     elif c < 0:
-        return('Right side wins!')
+        return "Right side wins!"
     else:
-        return("Let's fight again!")
+        return "Let's fight again!"
