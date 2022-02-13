@@ -3,6 +3,7 @@ import requests
 
 
 url = "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+url_dollar = 'https://cbr.ru/'
 
 
 def main():
@@ -15,5 +16,15 @@ def main():
         print(" ".join(movietagi))
 
 
+def main_dollar():
+    response = requests.get(url_dollar)
+    html = response.text
+    soup = BeautifulSoup(html, "html.parser")
+    dolla = soup.find_all('div', class_='col-md-2 col-xs-9 _right mono-num')
+    for item in dolla:
+        print(item.text.strip())
+    # print(dolla)
+
+
 if __name__ == "__main__":
-    main()
+    main_dollar()
